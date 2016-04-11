@@ -360,7 +360,7 @@ class Doctrine_Manager extends Doctrine_Configurable implements Countable, Itera
     {
         $parts = array();
 
-        $names = array('dsn', 'scheme', 'host', 'port', 'user', 'pass', 'path', 'query', 'fragment', 'unix_socket');
+        $names = array('dsn', 'scheme', 'host', 'port', 'user', 'pass', 'path', 'query', 'fragment', 'unix_socket', 'dbname');
 
         foreach ($names as $name) {
             if ( ! isset($parts[$name])) {
