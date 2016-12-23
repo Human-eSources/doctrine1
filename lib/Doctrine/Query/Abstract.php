@@ -97,7 +97,7 @@ abstract class Doctrine_Query_Abstract
     /**
      * @var integer $_state   The current state of this query.
      */
-    protected $_state = Doctrine_Query::STATE_CLEAN;
+    protected $_state = self::STATE_CLEAN;
 
     /**
      * @var array $_params  The parameters of this query.
@@ -650,7 +650,7 @@ abstract class Doctrine_Query_Abstract
 
         $tableAlias = $this->getSqlTableAlias($componentAlias);
 
-        if ($this->_type !== Doctrine_Query::SELECT) {
+        if ($this->_type !== self::SELECT) {
             $tableAlias = '';
         } else {
             $tableAlias .= '.';
@@ -2077,7 +2077,7 @@ abstract class Doctrine_Query_Abstract
             $this->_dqlParts[$queryPartName] = array($queryPart);
         }
 
-        $this->_state = Doctrine_Query::STATE_DIRTY;
+        $this->_state = self::STATE_DIRTY;
         return $this;
     }
 

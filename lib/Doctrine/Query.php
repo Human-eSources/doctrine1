@@ -726,7 +726,7 @@ class Doctrine_Query extends Doctrine_Query_Abstract implements Countable
 
                             $field = array_pop($e);
 
-                            if ($this->getType() === Doctrine_Query::SELECT) {
+                            if ($this->getType() === self::SELECT) {
                                 $componentAlias = implode('.', $e);
 
                                 if (empty($componentAlias)) {
@@ -795,7 +795,7 @@ class Doctrine_Query extends Doctrine_Query_Abstract implements Countable
 
                                     $tableAlias = $this->getSqlTableAlias($componentAlias);
 
-                                    if ($this->getType() === Doctrine_Query::SELECT) {
+                                    if ($this->getType() === self::SELECT) {
                                         // build sql expression
                                         $term[0] = $this->_conn->quoteIdentifier($tableAlias)
                                                  . '.'
