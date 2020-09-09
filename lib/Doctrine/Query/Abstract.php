@@ -669,7 +669,7 @@ abstract class Doctrine_Query_Abstract
 
         $tableAlias = $this->getSqlTableAlias($componentAlias);
 
-        if ($this->_type !== self::SELECT) {
+        if ($this->_type !== Doctrine_Query::SELECT) {
             $tableAlias = '';
         } else {
             $tableAlias .= '.';
@@ -2202,7 +2202,7 @@ abstract class Doctrine_Query_Abstract
             $this->_dqlParts[$queryPartName] = array($queryPart);
         }
 
-        $this->_state = self::STATE_DIRTY;
+        $this->_state = Doctrine_Query::STATE_DIRTY;
         return $this;
     }
 
